@@ -4,11 +4,13 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: "Open Sans",
-      titles: "Montserrat",
     },
     extend: {
       colors: {
-        text: "hsl(240, 14%, 24%)",
+        primary: "#136cfb",
+        textcolor: "#353546",
+        bgBase: "#1E2A78",
+        bgGradient: " #49BCF6",
       },
     },
   },
