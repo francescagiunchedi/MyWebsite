@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* npx tailwindcss -i ./src/styles.css -o ./public/styles-output.css --watch */
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +12,7 @@
   --primary-color: hsl(217, 97%, 53%);
   --primary-textColor: hsl(240, 14%, 24%);
   --body-text-size: 16px;
-  --baseline: 18px;
+  --baseline: 1.5rem;
   --doubleBaseline: calc(var(--baseline) * 2);
   --background-gradient: linear-gradient(
     180deg,
@@ -23,14 +25,26 @@
 body {
   height: 100vw;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--body-text-size);
+  line-height: var(--baseline);
   color: var(--primary-textColor);
   background-color: var(--bacground-color);
 }
 header {
   height: 100vh;
+  margin: 0;
   background: linear-gradient(
     180deg,
     rgba(203, 212, 222, 1) 100%,
     rgba(231, 234, 237, 1) 0%
   );
+}
+nav {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  color: var(--bacground-color);
+  background-color: var(--primary-color);
+  padding: 2rem 0;
 }

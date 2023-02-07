@@ -43,7 +43,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Open Sans;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -2177,6 +2177,8 @@ video {
   content: var(--tw-content);
 }
 
+/* npx tailwindcss -i ./src/styles.css -o ./public/styles-output.css --watch */
+
 * {
   box-sizing: border-box;
 }
@@ -2184,6 +2186,9 @@ video {
 :root {
   --primary-color: hsl(217, 97%, 53%);
   --primary-textColor: hsl(240, 14%, 24%);
+  --body-text-size: 16px;
+  --baseline: 1.5rem;
+  --doubleBaseline: calc(var(--baseline) * 2);
   --background-gradient: linear-gradient(
     180deg,
     hsl(212, 22%, 83%) 100%,
@@ -2194,18 +2199,31 @@ video {
 
 body {
   height: 100vw;
-  margin: 0 120px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--body-text-size);
+  line-height: var(--baseline);
   color: var(--primary-textColor);
   background-color: var(--bacground-color);
 }
 
 header {
   height: 100vh;
+  margin: 0;
   background: linear-gradient(
     180deg,
     rgba(203, 212, 222, 1) 100%,
     rgba(231, 234, 237, 1) 0%
   );
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  color: var(--bacground-color);
+  background-color: var(--primary-color);
+  padding: 2rem 0;
 }
 
 .hover\:font-bold:hover {
@@ -2263,10 +2281,6 @@ header {
     .sm\:container {
       max-width: 1536px;
     }
-  }
-
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:grid-cols-1 {

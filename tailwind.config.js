@@ -2,7 +2,15 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: "Open Sans",
+      titles: "Montserrat",
+    },
+    extend: {
+      colors: {
+        text: "hsl(240, 14%, 24%)",
+      },
+    },
   },
   plugins: [],
 };
