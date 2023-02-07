@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(217, 97%, 53%);
+  --primary-textColor: hsl(240, 14%, 24%);
+  --body-text-size: 16px;
+  --baseline: 18px;
+  --doubleBaseline: calc(var(--baseline) * 2);
+  --background-gradient: linear-gradient(
+    180deg,
+    hsl(212, 22%, 83%) 100%,
+    hsl(210, 14%, 92%) 0%
+  );
+  --bacground-color: hsl(212, 22%, 83%);
+}
+
+body {
+  height: 100vw;
+  margin: 0;
+  color: var(--primary-textColor);
+  background-color: var(--bacground-color);
+}
+header {
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(203, 212, 222, 1) 100%,
+    rgba(231, 234, 237, 1) 0%
+  );
+}
