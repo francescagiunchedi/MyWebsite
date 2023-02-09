@@ -9,8 +9,8 @@ module.exports = {
       colors: {
         primary: "#136cfb",
         textcolor: "#353546",
-        bgBase: "#1E2A78",
-        bgGradient: " #49BCF6",
+        Borange1: "#f6d365",
+        Borange2: "#fda085",
       },
     },
   },

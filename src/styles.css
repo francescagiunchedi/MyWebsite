@@ -5,22 +5,29 @@
 /* npx tailwindcss -i ./src/styles.css -o ./public/styles-output.css --watch */
 
 :root {
-  --primary-color: #136cfb;
+  --primary-color: #0065eb;
   --primary-textColor: #353546;
   --body-text-size: 16px;
   --baseline: 1.5rem;
   --doubleBaseline: calc(var(--baseline) * 2);
-
-  --bacground-color: #cad3dd;
   --titles: "Montserrat", sans-serif;
+  --background-color: #d5d9dd;
 }
-h1 {
+h1,
+h2 {
   margin: 0;
   padding: 0;
   font-family: var(--titles);
-  font-size: 34px;
+  font-size: 30px;
   line-height: var(--doubleBaseline);
   font-weight: 900;
+}
+p {
+  margin-top: var(--doubleBaseline);
+}
+
+h2 {
+  color: var(--primary-textColor);
 }
 body {
   height: 100vw;
@@ -29,27 +36,23 @@ body {
   font-size: var(--body-text-size);
   line-height: var(--baseline);
   color: var(--primary-textColor);
-  background-color: var(--bacground-color);
+  background: var(--background-color);
+  text-align: center;
 }
 header {
+  color: var(--background-color);
   height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
+  background: linear-gradient(#005ded, #00c6fb);
 }
-/* header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: black;
-} */
+
 nav {
   margin: 0;
   padding: 0;
   font-weight: 800;
-  color: var(--bacground-color);
+  color: var(--background-color);
   background: var(--primary-color);
   font-family: var(--titles);
 }
@@ -66,27 +69,33 @@ nav > ul > li {
   @apply px-3 py-4;
 }
 .nav-section {
-  height: 100vw;
   position: relative;
-}
-.nav-section > div {
-  position: relative;
-  height: 100vw;
-  top: calc(50vw - 25vw);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
-.call-to-action {
+.btn {
   margin: 0;
-  padding: 0.5rem 0.5rem;
-  color: var(--bacground-color);
-  background: var(--primary-color);
+  padding: 0.8rem 0.5rem;
   font-family: var(--titles);
   font-weight: 700;
   border-radius: 0.5rem;
+  text-align: center;
+  color: var(--background-color);
+  background: var(--primary-color);
+
+  transition: all 200ms ease-in-out;
+}
+.btn-primary {
   border-color: var(--primary-color);
   border-width: 0.4rem;
   border-style: solid;
-  text-align: center;
+}
+.call-to-action {
+  color: var(--primary-textColor);
+  background: linear-gradient(hsl(27, 85%, 73%), hsl(13, 90%, 76%));
 }
 
 .head-calToAction > ul {
@@ -100,30 +109,44 @@ nav > ul > li {
   margin-top: var(--baseline);
   margin-bottom: var(--doubleBaseline);
 }
-.head-calToAction > ul > li {
-  position: relative;
-}
-
 .head-calToAction > ul > li::before {
-  --size: 0.4rem;
   content: "";
-  width: var(--size);
-  height: var(--size);
-  background: var(--primary-textColor);
-  border-radius: 50%;
+  height: 100%; /* needed to work*/
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--background-color);
+  margin: 0 0.4rem;
   display: inline-block;
-  margin: 0 0.5em;
-  position: relative;
-  top: -10%;
+  border-radius: 50%;
 }
 .head-calToAction > ul > li:first-child:before {
-  content: none;
+  display: none;
 }
+
 .head-calToAction > p {
   font-family: var(--titles);
   font-size: 14px;
   font-weight: 400;
   line-height: var(--baseline);
   text-align: center;
-  margin-bottom: calc(var(--baseline) * 4);
+  margin-bottom: var(--doubleBaseline);
+}
+.logo-examles {
+  aspect-ratio: 1 / 1;
+  background-color: #353546;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.animation-examles {
+  aspect-ratio: 16/9;
+  background-color: #353546;
+  border-radius: 0.5rem;
+}
+.web-examles {
+  aspect-ratio: 1/1;
+  background-color: #353546;
+  border-radius: 0.5rem;
+}
+.main-body > section {
+  margin-bottom: calc(var(--doubleBaseline) * 2);
 }
