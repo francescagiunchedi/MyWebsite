@@ -1741,6 +1741,11 @@ video {
   padding-right: 1rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2249,6 +2254,12 @@ header {
   margin: 0;
   padding: 0;
   background: linear-gradient(#005ded, #00c6fb);
+  /* background: linear-gradient(#00c6fb, #005ded); */
+}
+
+footer {
+  color: var(--background-color);
+  background: var(--primary-textColor);
 }
 
 nav {
@@ -2277,6 +2288,7 @@ nav > ul > li {
 }
 
 .nav-section {
+  height: 91vh;
   position: relative;
   display: flex;
   flex-wrap: wrap;

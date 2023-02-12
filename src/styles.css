@@ -46,6 +46,11 @@ header {
   margin: 0;
   padding: 0;
   background: linear-gradient(#005ded, #00c6fb);
+  /* background: linear-gradient(#00c6fb, #005ded); */
+}
+footer {
+  color: var(--background-color);
+  background: var(--primary-textColor);
 }
 
 nav {
@@ -69,6 +74,7 @@ nav > ul > li {
   @apply px-3 py-4;
 }
 .nav-section {
+  height: 91vh;
   position: relative;
   display: flex;
   flex-wrap: wrap;
