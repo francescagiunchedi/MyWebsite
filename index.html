@@ -8,50 +8,44 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <!-- fonts -->
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet" />
+
     <!-- my links -->
     <link
       rel="stylesheet"
-      href="/public/styles-output.css" />
+      href="/dist/output.css" />
+    <!-- 
+    <link
+      rel="stylesheet"s
+      href="/dist/styles.css" /> -->
 
     <script
       src="/script.js"
       defer></script>
     <title>Francesca Giunchedi</title>
   </head>
-  <body>
-    <header>
-      <nav class="shadow-md">
-        <ul class="nav-list">
-          <li><a href="">Home</a></li>
-          <li><a href="">Servizi</a></li>
-          <li><a href="">Contatti</a></li>
+  <body class="font-body bg-background">
+    <header class="nav-bar">
+      <nav class="shadow-md flex justify-center bg-primary">
+        <ul class="flex inline justify-center text-background font-bold">
+          <li class="py-4 px-3"><a href="">Home</a></li>
+          <li class="py-4 px-3"><a href="">Servizi</a></li>
+          <li class="py-4 px-3"><a href="">Contatti</a></li>
         </ul>
       </nav>
-      <section class="nav-section px-4 flex justify-center">
+      <section class="px-4 font-titles">
         <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="head-calToAction">
+          <div class="">
             <p class="hidden">Francesca Giunchedi</p>
-            <h1 class="text-center">
-              Trasforma il tuo brand con un design unico, animazioni e sito web
+            <h1 class="titles text-background">
+              Transforma il tuo brand con un design unico, animazioni e sito web
             </h1>
             <!-- <h1 class="text-center">Transform your brand with custom design, animation, and a website that tells your story.</h1> -->
-            <ul>
+            <ul class="list-inside list-disc">
               <li>Branding</li>
               <li>Video</li>
               <li>Siti-web</li>
             </ul>
-            <div class="btn call-to-action">
+            <div class="">
               <a href="http://">Chiedi un preventivo</a>
             </div>
           </div>
@@ -62,10 +56,10 @@
       <!-- <div class="overlay"></div> -->
     </header>
     <!-- start of main contenent -->
-    <main class="main-body px-4">
-      <section class="section logo-section mt-20">
+    <main class="px-4">
+      <section class="mt-20">
         <div class="grid sm:grid-cols-1 md:grid-cols-2">
-          <div class="logo-description">
+          <div class="">
             <h2>
               Un'identità
               <br class="md:hidden" />
@@ -81,16 +75,16 @@
               eligendi, officiis ipsa.
             </p>
           </div>
-          <div class="logo-examles shadow-md my-10">
+          <div class="shadow-md my-10">
             <img
               src=""
               alt="logo-example" />
           </div>
         </div>
       </section>
-      <section class="section animation-section">
+      <section class="">
         <div class="grid sm:grid-cols-1 md:grid-cols-2">
-          <div class="animation-description">
+          <div class="">
             <h2>Animazioni che donano vita</h2>
             <p>
               Presenta i tuoi prodotti con un'animazione accattvante.
@@ -101,12 +95,12 @@
               temporibus dignissimos accusamus! Iure totam praesentium id.
             </p>
           </div>
-          <div class="animation-examles shadow-md my-10"></div>
+          <div class="shadow-md my-10"></div>
         </div>
       </section>
-      <section class="section website-section">
+      <section class="">
         <div class="grid sm:grid-cols-1 md:grid-cols-2">
-          <div class="web-description">
+          <div class="">
             <h2>Lascia il segno con un sito</h2>
             <!-- Make a lasting first impression with a custom website -->
             <p>
@@ -118,11 +112,11 @@
               cumque culpa, est amet quod?
             </p>
           </div>
-          <div class="web-examles shadow-md my-10"></div>
+          <div class="shadow-md my-10"></div>
         </div>
       </section>
     </main>
-    <section class="presentation-section px-4">
+    <section class="px-4">
       <div class="grid sm:grid-cols-1 md:grid-cols-2">
         <h3>Francesca Giunchedi</h3>
         <ul>
@@ -133,7 +127,7 @@
         <article></article>
         <div>
           <a
-            class="btn btn-primary"
+            class=""
             href="http://"
             >Contattami</a
           >
