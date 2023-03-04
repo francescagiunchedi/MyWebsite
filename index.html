@@ -9,60 +9,70 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
-    <!-- my links -->
+    <!-- boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
+    <!-- fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet" />
+    <!-- css -->
     <link
       rel="stylesheet"
-      href="/dist/output.css" />
-    <!-- 
-    <link
-      rel="stylesheet"s
-      href="/dist/styles.css" /> -->
+      href="/src/style.css" />
 
-    <script
-      src="/script.js"
-      defer></script>
     <title>Francesca Giunchedi</title>
   </head>
-  <body class="font-body bg-background">
-    <header class="nav-bar">
-      <nav class="shadow-md flex justify-center bg-primary">
-        <ul class="flex inline justify-center text-background font-bold">
+  <body>
+    <header>
+      <nav class="shadowsm">
+        <ul>
           <li class="py-4 px-3"><a href="">Home</a></li>
           <li class="py-4 px-3"><a href="">Servizi</a></li>
           <li class="py-4 px-3"><a href="">Contatti</a></li>
         </ul>
       </nav>
-      <section class="px-4 font-titles">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="">
-            <p class="hidden">Francesca Giunchedi</p>
-            <h1 class="titles text-background">
-              Transforma il tuo brand con un design unico, animazioni e sito web
+      <section class="margins presentation">
+        <div>
+          <div>
+            <p>Francesca Giunchedi</p>
+            <h1>
+              Trova il <span>vero io</span> del tuo brand
+              <!-- Transforma il tuo brand con un design unico, animazioni e sito web -->
             </h1>
             <!-- <h1 class="text-center">Transform your brand with custom design, animation, and a website that tells your story.</h1> -->
-            <ul class="list-inside list-disc">
+            <ul class="work-titles">
               <li>Branding</li>
               <li>Video</li>
               <li>Siti-web</li>
             </ul>
-            <div class="">
+            <div>
               <a href="http://">Chiedi un preventivo</a>
             </div>
           </div>
           <!-- img -->
-          <div class="hidden">image</div>
+          <div class="d-none d-md-flex">image</div>
         </div>
       </section>
-      <!-- <div class="overlay"></div> -->
     </header>
     <!-- start of main contenent -->
-    <main class="px-4">
-      <section class="mt-20">
-        <div class="grid sm:grid-cols-1 md:grid-cols-2">
+    <main class="margins">
+      <section>
+        <div>
           <div class="">
             <h2>
               Un'identità
-              <br class="md:hidden" />
+              <br />
               un logo
             </h2>
             <!-- Craft your identity with a custom logo -->
@@ -75,16 +85,16 @@
               eligendi, officiis ipsa.
             </p>
           </div>
-          <div class="shadow-md my-10">
+          <div>
             <img
               src=""
               alt="logo-example" />
           </div>
         </div>
       </section>
-      <section class="">
-        <div class="grid sm:grid-cols-1 md:grid-cols-2">
-          <div class="">
+      <section>
+        <div>
+          <div>
             <h2>Animazioni che donano vita</h2>
             <p>
               Presenta i tuoi prodotti con un'animazione accattvante.
@@ -95,12 +105,16 @@
               temporibus dignissimos accusamus! Iure totam praesentium id.
             </p>
           </div>
-          <div class="shadow-md my-10"></div>
+          <div>
+            <img
+              src=""
+              alt="animation-example" />
+          </div>
         </div>
       </section>
-      <section class="">
-        <div class="grid sm:grid-cols-1 md:grid-cols-2">
-          <div class="">
+      <section>
+        <div>
+          <div>
             <h2>Lascia il segno con un sito</h2>
             <!-- Make a lasting first impression with a custom website -->
             <p>
@@ -112,30 +126,32 @@
               cumque culpa, est amet quod?
             </p>
           </div>
-          <div class="shadow-md my-10"></div>
+          <div>
+            <img
+              src=""
+              alt="website-example" />
+          </div>
+        </div>
+      </section>
+      <section class="about-me">
+        <div>
+          <h3>Francesca Giunchedi</h3>
+          <ul class="work-titles" >
+            <li>Branding</li>
+            <li>Video</li>
+            <li>Siti-web</li>
+          </ul>
+          <article></article>
+          <div>
+            <a href="http://">Contattami</a>
+            <p>
+              Sei delle domande su servizi, costi e consulenze scrivimi pure
+            </p>
+          </div>
         </div>
       </section>
     </main>
-    <section class="px-4">
-      <div class="grid sm:grid-cols-1 md:grid-cols-2">
-        <h3>Francesca Giunchedi</h3>
-        <ul>
-          <li>Branding</li>
-          <li>Video</li>
-          <li>Siti-web</li>
-        </ul>
-        <article></article>
-        <div>
-          <a
-            class=""
-            href="http://"
-            >Contattami</a
-          >
-          <p>Sei delle domande su servizi, costi e consulenze scrivimi pure</p>
-        </div>
-      </div>
-    </section>
     <!-- start of footer -->
-    <footer class="px-4 py-5">copirigthin etc</footer>
+    <footer class="margins">copirigthin etc</footer>
   </body>
 </html>
