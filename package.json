@@ -1,0 +1,30 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/styles.css --dir public",
+    "build:watch": "postcss src/styles.css --dir public -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francescagiunchedi/MyWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francescagiunchedi/MyWebsite/issues"
+  },
+  "homepage": "https://github.com/francescagiunchedi/MyWebsite#readme",
+  "devDependencies": {
+    "cssnano": "^5.1.15",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^8.0.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.13"
+  }
+}
