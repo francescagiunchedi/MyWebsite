@@ -13,6 +13,8 @@ html,
 body {
   height: 100%;
   color: #353546;
+  text-align: center;
+  background: #e2e0db;
 }
 
 a,
@@ -31,7 +33,7 @@ main section {
 }
 
 header {
-  color: #ebeae8;
+  color: #e2e0db;
   height: 100vh;
   background: linear-gradient(0deg, hsl(255, 52%, 35%) 0%, hsl(233, 56%, 45%) 100%);
 }
@@ -52,7 +54,7 @@ nav > ul {
 
 nav > ul > li,
 nav > ul > li > a {
-  color: #ebeae8;
+  color: #e2e0db;
   list-style: none;
   text-decoration: none;
 }
@@ -62,6 +64,9 @@ nav > ul > li > a {
   color: #432b89;
   font-weight: 800;
   text-align: center;
+}
+.call-to-action .button {
+  background-color: #6de38c;
 }
 
 .presentation {
@@ -158,7 +163,7 @@ h6 {
 }
 
 .shadowsm {
-  box-shadow: 0 0.2rem 0.3rem hsla(0, 0%, 0%, 0.14);
+  box-shadow: 0 0.2rem 0.3rem hsla(0, 0%, 0%, 0.2);
 }
 
 .button {
@@ -169,7 +174,7 @@ h6 {
 
 .about-me .button {
   letter-spacing: 0.1em;
-  color: #ebeae8;
+  color: #e2e0db;
   background-color: #3240b3;
   margin-bottom: 1rem;
 }
@@ -180,10 +185,16 @@ h6 {
 }
 
 @media (width >= 768px) {
+  body {
+    text-align: start;
+  }
   header {
     color: #353546;
     background: none;
-    background-color: #ebeae8;
+  }
+  nav {
+    background: #3240b3;
+    background: linear-gradient(#3240b3, #333195);
   }
   nav > ul > li > a {
     font-weight: 700;
@@ -195,14 +206,19 @@ h6 {
     height: 93%;
   }
   .presentation-image {
-    background: #3240b3;
     margin-top: 6rem;
     height: 40vh;
     width: 100vw;
     box-shadow: inset 0 0.2rem 0.3rem hsla(0, 0%, 0%, 0.14);
   }
-}
-@media (width >= 768px) {
+  .call-to-action {
+    font-size: 1.3em;
+    color: #473480;
+    letter-spacing: 0.1rem;
+  }
+  .call-to-action .button {
+    background: #7ad692;
+  }
   .main-sections {
     display: flex;
     justify-content: space-between;

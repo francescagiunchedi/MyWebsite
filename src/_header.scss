@@ -31,6 +31,9 @@ nav > ul > li > a {
 }
 
 .call-to-action {
+  .button {
+    background-color: $accentColor;
+  }
   margin-top: 6em;
   color: $secondaryColor;
   font-weight: 800;
