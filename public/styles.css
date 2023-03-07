@@ -1,31 +1,33 @@
 * {
   box-sizing: border-box;
-  font-family: Open Sans, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 :root {
   --textColor: #353546;
   --backgroundColor: #ebeae8;
   --secondaryColor: #432b89;
   --primaryColor: #3240b3;
-  --tx-small: 0.8rem;
+
 }
 p {
   margin: 0;
   padding: 0;
 }
-body,
-html {
+html,
+body {
+  height: 100%;
   color: #353546;
   color: var(--textColor);
-  height: 100%;
 }
 a,
 a:active {
   color: inherit;
   text-decoration: none;
 }
-footer,
 main,
+footer {
+  margin-top: 5rem;
+}
 main section {
   margin-top: 5rem;
 }
@@ -37,47 +39,48 @@ main section {
   margin-right: 1.5rem;
 }
 .shadowsm {
-  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0.2rem 0.3rem hsla(0, 0%, 0%, 0.14);
 }
 .button {
   background-color: inherit;
-  border-radius: 0.5em;
   padding: 0.7em 1.5rem;
+  border-radius: 0.5em;
 }
 .about-me .button {
-  background-color: #3240b3;
+  letter-spacing: 0.1em;
   color: #ebeae8;
   color: var(--backgroundColor);
-  letter-spacing: 0.1em;
+  background-color: #3240b3;
   margin-bottom: 1rem;
 }
 .about-me p {
   font-size: 0.8rem;
   opacity: 0.8;
 }
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif; */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
 h1 {
-  font-size: 2.12rem;
-}
-h1,
-h2 {
   font-weight: 900;
+  font-size: 2.12rem;
   letter-spacing: 0.1rem;
 }
 h2 {
   color: #353546;
   color: var(--textColor);
-  font-size: 1.6rem;
   padding-bottom: 0.5em;
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
 }
 h3 {
   font-size: 1rem;
@@ -87,31 +90,37 @@ h3 {
 }
 h6 {
   font-size: 0.8rem;
-  font-size: var(--tx-small);
   font-weight: 500;
   letter-spacing: 0.1em;
 }
+@media (min-width: 768px) {
+  h6 {
+    font-size: 1rem;
+  }
+}
 header {
-  background: #422b88;
-  background: linear-gradient(90deg, #422b88, #3241b3);
-  background: -webkit-linear-gradient(90deg, #422b88, #3241b3);
   color: #ebeae8;
   color: var(--backgroundColor);
   height: 100vh;
+
+  background: linear-gradient(
+    0deg,
+    hsla(255, 52%, 35%, 1) 0%,
+    hsla(233, 56%, 45%, 1) 100%
+  );
 }
 nav {
+  display: flex;
+  justify-content: center;
   background-color: #3240b3;
   background-color: var(--primaryColor);
 }
-nav,
 nav > ul {
-  display: flex;
-  justify-content: center;
-}
-nav > ul {
-  align-items: center;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 nav > ul > li,
 nav > ul > li > a {
@@ -121,31 +130,60 @@ nav > ul > li > a {
   text-decoration: none;
 }
 .call-to-action {
+  margin-top: 6em;
   color: #432b89;
   color: var(--secondaryColor);
   font-weight: 800;
-  margin-top: 6em;
   text-align: center;
 }
 .presentation {
-  align-items: center;
+  display: flex;
   flex-direction: column;
   height: 90%;
-}
-.presentation,
-.work-titles {
-  display: flex;
+  align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
+  position: relative;
+}
+@media (min-width: 768px) {
+  header {
+    color: #353546;
+    color: var(--textColor);
+    background: none;
+    background-color: #ebeae8;
+    background-color: var(--backgroundColor);
+  }
+  nav > ul > li > a {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+  .presentation {
+    justify-content: end;
+    height: 93%;
+  }
+
+  .presentation-image {
+    background: #3240b3;
+    background: var(--primaryColor);
+    margin-top: 6rem;
+    height: 40vh;
+    width: 100vw;
+
+    box-shadow: inset 0 0.2rem 0.3rem hsla(0, 0%, 0%, 0.14);
+  }
 }
 .work-titles {
-  flex-direction: row;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  position: relative;
 }
-.work-titles li ~ li:before {
+.work-titles li ~ li::before {
   content: "●";
   font-size: 0.5em;
   padding: 0 1.7em;
@@ -154,9 +192,9 @@ nav > ul > li > a {
 }
 .about-me .work-titles {
   font-size: 0.9rem;
-  font-weight: 500;
   letter-spacing: 0.1rem;
+  font-weight: 500;
 }
-.about-me .work-titles li ~ li:before {
+.about-me .work-titles li ~ li::before {
   padding: 0 1em;
 }
