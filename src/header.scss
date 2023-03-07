@@ -1,0 +1,48 @@
+@import "variable";
+
+header {
+  color: $backgroundColor;
+  height: 100vh;
+
+  background: linear-gradient(
+    0deg,
+    hsla(255, 52%, 35%, 1) 0%,
+    hsla(233, 56%, 45%, 1) 100%
+  );
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: $primaryColor;
+}
+nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav > ul > li,
+nav > ul > li > a {
+  color: $backgroundColor;
+  list-style: none;
+  text-decoration: none;
+}
+
+.call-to-action {
+  margin-top: 6em;
+  color: $secondaryColor;
+  font-weight: 800;
+  text-align: center;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}

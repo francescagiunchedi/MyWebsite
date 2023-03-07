@@ -1,0 +1,46 @@
+@import "variable";
+
+// header
+@media (width >= 768px) {
+  header {
+    color: $textColor;
+    background: none;
+    background-color: $backgroundColor;
+  }
+  nav > ul > li > a {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+  .presentation {
+    justify-content: end;
+    height: 93%;
+  }
+
+  .presentation-image {
+    background: $primaryColor;
+    margin-top: 6rem;
+    height: 40vh;
+    width: 100vw;
+
+    box-shadow: inset 0 0.2rem 0.3rem hsla(0, 0%, 0%, 0.14);
+  }
+}
+
+// main
+@media (width >= 768px) {
+  .main-sections {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-img {
+    width: 40%;
+  }
+
+  .section-text {
+    width: 55%;
+  }
+  .about-me {
+    margin-top: 10rem;
+  }
+}

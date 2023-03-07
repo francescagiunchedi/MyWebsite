@@ -1,0 +1,31 @@
+@import "variable";
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  color: $textColor;
+}
+
+a,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+main,
+footer {
+  margin-top: 5rem;
+}
+main section {
+  margin-top: 5rem;
+}
