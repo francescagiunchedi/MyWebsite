@@ -1,0 +1,38 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.work-titles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.work-titles li ~ li::before {
+  content: "●";
+  font-size: 0.5em;
+  padding: 0 1.7em;
+  position: relative;
+  top: -0.4em;
+}
+.about-me .work-titles {
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+.about-me .work-titles li ~ li::before {
+  padding: 0 1em;
+}

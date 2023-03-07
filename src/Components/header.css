@@ -1,0 +1,49 @@
+header {
+  color: var(--backgroundColor);
+  height: 100vh;
+  background: hsla(255, 52%, 35%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(255, 52%, 35%, 1) 0%,
+    hsla(233, 56%, 45%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(255, 52%, 35%, 1) 0%,
+    hsla(233, 56%, 45%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(255, 52%, 35%, 1) 0%,
+    hsla(233, 56%, 45%, 1) 100%
+  );
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primaryColor);
+}
+nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav > ul > li,
+nav > ul > li > a {
+  color: var(--backgroundColor);
+  list-style: none;
+  text-decoration: none;
+}
+
+.call-to-action {
+  margin-top: 6em;
+  color: var(--secondaryColor);
+  font-weight: 800;
+  text-align: center;
+}

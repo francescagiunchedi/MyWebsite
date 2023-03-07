@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --textColor: #353546;
+  --backgroundColor: #ebeae8;
+  --secondaryColor: #432b89;
+  --primaryColor: #3240b3;
+
+  --tx-small: 0.8rem;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--textColor);
+}
+
+a,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+main,
+footer {
+  margin-top: 5rem;
+}
+main section {
+  margin-top: 5rem;
+}
