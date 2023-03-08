@@ -1,0 +1,49 @@
+@import "variable";
+@import "fonts";
+
+@media (width >= 992px) {
+  body {
+    font-size: 10px;
+    text-align: left;
+  }
+  h6 {
+    font-size: 0.7rem;
+  }
+  //   header
+  nav {
+    ul {
+      li {
+        padding: 1rem 2rem;
+        a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .presentation {
+    text-align: left;
+    .call-to-action {
+      font-size: 0.8rem;
+      margin-left: 0;
+      display: inline-block;
+    }
+    .presentation-text {
+      display: inline-block;
+      margin: auto;
+    }
+    .work-titles {
+      justify-content: flex-start;
+    }
+    .presentation-image {
+      width: 60%;
+    }
+  }
+  // main
+  main {
+    padding-top: 5rem;
+    .about-me .work-titles {
+      font-size: 0.7rem;
+    }
+  }
+} ;

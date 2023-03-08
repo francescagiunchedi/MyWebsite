@@ -1,5 +1,27 @@
 @import "variable";
 
+// landscape sm
+
+@media (width > 576px) and (orientation: landscape) {
+  .presentation {
+    margin-top: 2rem;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+
+    h6 {
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      padding-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  main {
+    padding-top: 1rem;
+  }
+}
+
+// portrait table
 // header
 @media (width >= 768px) {
   body {
@@ -56,3 +78,27 @@
     margin-top: 10rem;
   }
 }
+
+// landscate table
+@media (width >= 768px) and (orientation: landscape) {
+  header {
+    height: 100vh;
+  }
+  main {
+    margin-top: 0;
+  }
+  .presentation {
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+    margin-right: 0;
+    div {
+      margin-right: 0.9rem;
+    }
+    .presentation-image {
+      margin: 0;
+      height: 100%;
+    }
+  }
+} ;
