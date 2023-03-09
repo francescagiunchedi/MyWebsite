@@ -1,52 +1,49 @@
-@import "variable";
-@import "fonts";
+@import "variables";
 
 header {
-  color: $backgroundColor;
   height: 100vh;
-
-  background: linear-gradient(
-    0deg,
-    hsla(255, 52%, 35%, 1) 0%,
-    hsla(233, 56%, 45%, 1) 100%
-  );
-}
-
-nav {
-  background-color: $primaryColor;
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    li {
-      padding: 1rem 2rem;
-      list-style: none;
-      a {
-        color: $backgroundColor;
-        text-decoration: none;
+  width: 100vw;
+  background: linear-gradient($primaryColor, $secondaryColor);
+  color: $backgroundColor;
+  nav {
+    background: $primaryColor;
+    width: 100vw;
+    ul {
+      justify-content: space-evenly;
+      color: $backgroundColor;
+      display: flex;
+      li {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+        font-weight: 600;
       }
     }
   }
-}
-
-.presentation {
-  display: flex;
-  flex-direction: column;
-  height: 90%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-.call-to-action {
-  .button {
-    background-color: $accentColor;
+  .list-row {
+    display: flex;
+    li {
+      &:before {
+        color: $backgroundColor;
+      }
+    }
   }
-  margin-top: 6em;
-  color: $secondaryColor;
-  font-weight: 800;
-  text-align: center;
+  section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      margin: 1rem;
+      .button {
+        a {
+          font-size: 0.8rem;
+          color: $secondaryColor;
+          background: $accentColor;
+          border: solid $accentColor;
+        }
+      }
+    }
+  }
 }

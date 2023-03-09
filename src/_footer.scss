@@ -1,0 +1,17 @@
+@import "variables";
+
+footer {
+  margin-top: 3rem;
+}
+
+// mediaQuery phone
+// mediaQuery tablet
+// mediaQuery destop
+@media (width >= 992px) {
+  footer {
+    div {
+      margin: 0 auto;
+      width: 70%;
+    }
+  }
+}

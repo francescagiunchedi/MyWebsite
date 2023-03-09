@@ -1,8 +1,12 @@
-@import "variable";
-@import "fonts";
+@import "variables";
+
+// utilities
+@import "utilities";
+
+// reset
 @import "base";
+
+// components
 @import "header";
 @import "main";
-@import "utilities";
-@import "mediaTablet";
-@import "mediaDesktops";
+@import "footer";
