@@ -2,16 +2,12 @@
 
 footer {
   margin-top: 3rem;
+  div {
+    font-size: $sm-font-size;
+    text-align: center;
+  }
 }
 
 // mediaQuery phone
 // mediaQuery tablet
 // mediaQuery destop
-@media (width >= 992px) {
-  footer {
-    div {
-      margin: 0 auto;
-      width: 70%;
-    }
-  }
-}

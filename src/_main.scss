@@ -14,7 +14,13 @@ main {
     .list-row {
       justify-content: center;
     }
+    img {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .about-me {
+    p {
+      font-size: $sm-font-size;
+    }
   }
 }
-
-
