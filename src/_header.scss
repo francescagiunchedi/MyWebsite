@@ -5,6 +5,7 @@ header {
   width: 100vw;
   background: linear-gradient($primaryColor, $secondaryColor);
   color: $backgroundColor;
+  text-align: center;
   nav {
     background: $primaryColor;
     width: 100vw;
@@ -21,6 +22,8 @@ header {
   }
   .list-row {
     display: flex;
+    justify-content: center;
+    padding-top: 1rem;
     li {
       &:before {
         color: $backgroundColor;
@@ -30,12 +33,16 @@ header {
   section {
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 
     div {
       margin: 1rem;
+      h6 {
+        padding-bottom: 4rem;
+      }
+
       .button {
         a {
           font-size: 0.8rem;
@@ -43,6 +50,12 @@ header {
           background: $accentColor;
           border: solid $accentColor;
         }
+      }
+    }
+    .header-img {
+      display: none;
+      @include tablets {
+        display: block;
       }
     }
   }

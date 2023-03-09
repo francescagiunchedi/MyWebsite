@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 .list-row {
   display: flex;
 }
@@ -13,7 +12,7 @@
 }
 .list-row li:before {
   content: "◆";
-  color: #3240b3;
+  color: #353546;
   border-radius: 100%;
   margin: 0 0.5rem;
 }
@@ -98,6 +97,7 @@ header {
   width: 100vw;
   background: linear-gradient(#3240b3, #432b89);
   color: #e2e0db;
+  text-align: center;
 }
 header nav {
   background: #3240b3;
@@ -115,6 +115,8 @@ header nav ul li {
 }
 header .list-row {
   display: flex;
+  justify-content: center;
+  padding-top: 1rem;
 }
 header .list-row li:before {
   color: #e2e0db;
@@ -122,18 +124,29 @@ header .list-row li:before {
 header section {
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 header section div {
   margin: 1rem;
 }
+header section div h6 {
+  padding-bottom: 4rem;
+}
 header section div .button a {
   font-size: 0.8rem;
   color: #432b89;
   background: #6de38c;
   border: solid #6de38c;
+}
+header section .header-img {
+  display: none;
+}
+@media (min-width: 768px) {
+  header section .header-img {
+    display: block;
+  }
 }
 
 main {
@@ -154,14 +167,35 @@ main section .list-row {
 main section img {
   margin-bottom: 1.5rem;
 }
+main .about-me h3 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+main .about-me h6 {
+  padding-bottom: 3rem;
+}
 main .about-me p {
+  padding-top: 0.5rem;
   font-size: 12px;
+}
+main .about-me article {
+  padding-bottom: 3rem;
 }
 
 footer {
   margin-top: 3rem;
 }
+footer .footer {
+  margin: 0;
+  padding: 1rem;
+}
 footer div {
   font-size: 12px;
   text-align: center;
+  padding: 1rem 0;
+  background: #e2e0db;
+  box-shadow: inset 0 5px 4px 0px hsla(0, 0%, 61%, 0.1);
+}
+footer div p {
+  margin: 0;
 }

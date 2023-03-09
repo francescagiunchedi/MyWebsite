@@ -19,8 +19,19 @@ main {
     }
   }
   .about-me {
+    h3 {
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+    }
+    h6 {
+      padding-bottom: 3rem;
+    }
     p {
+      padding-top: 0.5rem;
       font-size: $sm-font-size;
+    }
+    article {
+      padding-bottom: 3rem;
     }
   }
 }
