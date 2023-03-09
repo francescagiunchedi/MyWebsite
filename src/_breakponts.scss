@@ -17,7 +17,7 @@ $breakpoints: (
     @content;
   }
 }
-@mixin phnes {
+@mixin phones {
   @media (min-width: map-get($breakpoints, "phnes")) {
     @content;
   }

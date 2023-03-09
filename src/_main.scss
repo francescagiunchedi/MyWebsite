@@ -4,6 +4,10 @@ main {
     padding-top: 3rem;
     width: 85%;
     margin: auto;
+    .section-img {
+      width: fit-content;
+      margin: 0 auto;
+    }
 
     .button {
       a {

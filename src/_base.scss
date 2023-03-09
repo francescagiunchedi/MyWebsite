@@ -43,10 +43,7 @@ a:visited {
   text-decoration: none;
 }
 
-// mediaQuery phone
-// mediaQuery tablet
-// mediaQuery destop
-@media (width >= 992px) {
+@include desktops {
   body {
     font-size: $sm-font-size;
   }
