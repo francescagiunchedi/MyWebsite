@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 .list-row {
   display: flex;
 }
@@ -32,7 +31,7 @@
 }
 .button a {
   font-family: "Montserrat";
-  color: #e2e0db;
+  color: hsl(43, 6%, 89%);
   text-align: center;
   font-size: 12px;
   font-weight: 800;
@@ -52,7 +51,7 @@ body {
   width: 100%;
   font-size: 16px;
   font-family: "Open Sans";
-  background: #e2e0db;
+  background: linear-gradient(hsl(43, 6%, 89%), hsl(43, 9%, 89%));
 }
 
 h1,
@@ -87,31 +86,43 @@ a:visited {
   text-decoration: none;
 }
 
-@media (min-width: 992px) {
-  body {
-    font-size: 12px;
-  }
-}
 header {
   height: 100vh;
   width: 100vw;
   background: linear-gradient(#3240b3, #432b89);
-  color: #e2e0db;
+  color: hsl(43, 6%, 89%);
   text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 header nav {
   background: #3240b3;
   width: 100vw;
 }
+@media (min-width: 992px) {
+  header nav {
+    background: linear-gradient(#3240b3, hsl(245, 56%, 40%));
+  }
+}
 header nav ul {
   justify-content: space-evenly;
-  color: #e2e0db;
+  color: hsl(43, 6%, 89%);
   display: flex;
+}
+@media (min-width: 768px) {
+  header nav ul {
+    justify-content: center;
+  }
 }
 header nav ul li {
   font-size: 1rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
   font-weight: 600;
+}
+@media (min-width: 768px) {
+  header nav ul li {
+    padding: 1rem 2rem;
+  }
 }
 header .list-row {
   display: flex;
@@ -119,14 +130,31 @@ header .list-row {
   padding-top: 1rem;
 }
 header .list-row li:before {
-  color: #e2e0db;
+  color: hsl(43, 6%, 89%);
+}
+@media (min-width: 992px) {
+  header .list-row li:before {
+    color: #353546;
+  }
 }
 header section {
   height: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  header section {
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  header section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 header section div {
   margin: 1rem;
@@ -135,7 +163,6 @@ header section div h6 {
   padding-bottom: 4rem;
 }
 header section div .button a {
-  font-size: 0.8rem;
   color: #432b89;
   background: #6de38c;
   border: solid #6de38c;
@@ -145,7 +172,27 @@ header section .header-img {
 }
 @media (min-width: 768px) {
   header section .header-img {
+    margin: 0;
     display: block;
+    object-fit: cover;
+    min-width: 30%;
+    max-width: 65%;
+    margin-left: 1rem;
+    height: auto;
+  }
+}
+@media (min-width: 992px) {
+  header .header-text {
+    width: 40%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-top: 15%;
+  }
+}
+@media (min-width: 992px) {
+  header {
+    color: #353546;
+    background: none;
   }
 }
 
@@ -157,33 +204,64 @@ main section {
   width: 85%;
   margin: auto;
 }
+@media (min-width: 768px) {
+  main section {
+    width: 70%;
+    padding-top: 6rem;
+    text-align: start;
+  }
+}
 main section .section-img {
   width: fit-content;
   margin: 0 auto;
 }
 main section .button a {
-  background-color: #3240b3;
+  background: #3240b3;
   border: solid #3240b3;
 }
 main section .list-row {
   justify-content: center;
 }
+@media (min-width: 768px) {
+  main section .list-row {
+    justify-content: flex-start;
+  }
+}
 main section img {
   margin-bottom: 1.5rem;
 }
-main .about-me h3 {
+@media (min-width: 992px) {
+  main #about-me {
+    width: 40%;
+  }
+}
+main #about-me h3 {
   padding-top: 3rem;
   padding-bottom: 1rem;
 }
-main .about-me h6 {
+main #about-me h6 {
   padding-bottom: 3rem;
 }
-main .about-me p {
+main #about-me p {
   padding-top: 0.5rem;
   font-size: 12px;
 }
-main .about-me article {
+main #about-me article {
   padding-bottom: 3rem;
+}
+@media (min-width: 992px) {
+  main #about-me .contact {
+    display: flex;
+    align-items: center;
+  }
+  main #about-me .contact .button {
+    margin: 0 1rem;
+  }
+  main #about-me .contact p {
+    margin: 0;
+    padding: 0;
+    margin: 0 1rem;
+  }
 }
 
 footer {
@@ -197,9 +275,68 @@ footer div {
   font-size: 12px;
   text-align: center;
   padding: 1rem 0;
-  background: #e2e0db;
+  background: hsl(43, 6%, 89%);
   box-shadow: inset 0 5px 4px 0px hsla(0, 0%, 61%, 0.1);
 }
 footer div p {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  main .logos,
+  main .websites {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
+  }
+  main .logos .section-img,
+  main .websites .section-img {
+    grid-area: right;
+  }
+  main .logos .section-text,
+  main .websites .section-text {
+    grid-area: left;
+  }
+  main .animations {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
+  }
+  main .animations .section-img {
+    grid-area: left;
+  }
+  main .animations .section-text {
+    grid-area: right;
+  }
+}
+@media (min-width: 992px) {
+  main .logos,
+  main .websites {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
+  }
+  main .logos .section-img,
+  main .websites .section-img {
+    grid-area: right;
+  }
+  main .logos .section-text,
+  main .websites .section-text {
+    grid-area: left;
+  }
+  main .animations {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
+  }
+  main .animations .section-img {
+    grid-area: left;
+  }
+  main .animations .section-text {
+    grid-area: right;
+  }
 }

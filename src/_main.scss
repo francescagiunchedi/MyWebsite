@@ -1,9 +1,17 @@
+@use "sass:math";
 main {
   text-align: center;
+
   section {
     padding-top: 3rem;
     width: 85%;
     margin: auto;
+    @include tablets {
+      width: 70%;
+      padding-top: 6rem;
+      text-align: start;
+    }
+
     .section-img {
       width: fit-content;
       margin: 0 auto;
@@ -11,18 +19,24 @@ main {
 
     .button {
       a {
-        background-color: $primaryColor;
+        background: $primaryColor;
         border: solid $primaryColor;
       }
     }
     .list-row {
       justify-content: center;
+      @include tablets {
+        justify-content: flex-start;
+      }
     }
     img {
       margin-bottom: 1.5rem;
     }
   }
-  .about-me {
+  #about-me {
+    @include desktops {
+      width: 40%;
+    }
     h3 {
       padding-top: 3rem;
       padding-bottom: 1rem;
@@ -36,6 +50,20 @@ main {
     }
     article {
       padding-bottom: 3rem;
+    }
+    .contact {
+      @include desktops {
+        display: flex;
+        align-items: center;
+        .button {
+          margin: 0 1rem;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          margin: 0 1rem;
+        }
+      }
     }
   }
 }
