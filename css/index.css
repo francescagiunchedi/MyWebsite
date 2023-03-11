@@ -286,9 +286,10 @@ footer div p {
   main .logos,
   main .websites {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: auto;
     grid-template-areas: "left right";
+    gap: 2rem;
   }
   main .logos .section-img,
   main .websites .section-img {
@@ -300,9 +301,10 @@ footer div p {
   }
   main .animations {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto;
     grid-template-areas: "left right";
+    gap: 2rem;
   }
   main .animations .section-img {
     grid-area: left;
@@ -315,9 +317,10 @@ footer div p {
   main .logos,
   main .websites {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: auto;
     grid-template-areas: "left right";
+    gap: 2rem;
   }
   main .logos .section-img,
   main .websites .section-img {
@@ -329,9 +332,10 @@ footer div p {
   }
   main .animations {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto;
     grid-template-areas: "left right";
+    gap: 2rem;
   }
   main .animations .section-img {
     grid-area: left;
