@@ -69,5 +69,18 @@ main {
         }
       }
     }
+    .section-img {
+      width: fit-content;
+      img {
+        max-width: 40%;
+      }
+    }
+  }
+
+  .section-img {
+    img {
+      object-fit: cover;
+      max-width: 70%;
+    }
   }
 }

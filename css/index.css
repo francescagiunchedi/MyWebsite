@@ -269,6 +269,16 @@ main #about-me article {
     margin: 0 1rem;
   }
 }
+main #about-me .section-img {
+  width: fit-content;
+}
+main #about-me .section-img img {
+  max-width: 40%;
+}
+main .section-img img {
+  object-fit: cover;
+  max-width: 70%;
+}
 
 footer {
   margin-top: 3rem;
