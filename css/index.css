@@ -211,6 +211,12 @@ main section {
     text-align: start;
   }
 }
+@media (min-width: 992px) {
+  main section {
+    padding-top: 10%;
+    width: 60%;
+  }
+}
 main section .section-img {
   width: fit-content;
   margin: 0 auto;
@@ -293,11 +299,11 @@ footer div p {
   }
   main .logos .section-img,
   main .websites .section-img {
-    grid-area: right;
+    grid-area: left;
   }
   main .logos .section-text,
   main .websites .section-text {
-    grid-area: left;
+    grid-area: right;
   }
   main .animations {
     display: grid;
@@ -307,10 +313,10 @@ footer div p {
     gap: 2rem;
   }
   main .animations .section-img {
-    grid-area: left;
+    grid-area: right;
   }
   main .animations .section-text {
-    grid-area: right;
+    grid-area: left;
   }
 }
 @media (min-width: 992px) {
@@ -324,11 +330,11 @@ footer div p {
   }
   main .logos .section-img,
   main .websites .section-img {
-    grid-area: right;
+    grid-area: left;
   }
   main .logos .section-text,
   main .websites .section-text {
-    grid-area: left;
+    grid-area: right;
   }
   main .animations {
     display: grid;
@@ -338,9 +344,9 @@ footer div p {
     gap: 2rem;
   }
   main .animations .section-img {
-    grid-area: left;
+    grid-area: right;
   }
   main .animations .section-text {
-    grid-area: right;
+    grid-area: left;
   }
 }

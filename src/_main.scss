@@ -11,6 +11,10 @@ main {
       padding-top: 6rem;
       text-align: start;
     }
+    @include desktops {
+      padding-top: 10%;
+      width: 60%;
+    }
 
     .section-img {
       width: fit-content;
