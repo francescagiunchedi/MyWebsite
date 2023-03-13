@@ -2,32 +2,39 @@ main {
   @include tablets {
     .logos,
     .websites {
+      margin: auto;
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 40% 45%;
       grid-template-rows: auto;
       grid-template-areas: "left right";
       gap: 2rem;
 
       .section-img {
+        transform: translateY(-2rem);
         grid-area: left;
       }
       .section-text {
         grid-area: right;
+        margin: auto;
       }
     }
 
     .animations {
       display: grid;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 45% 40%;
       grid-template-rows: auto;
       grid-template-areas: "left right";
       gap: 2rem;
+      margin: auto;
 
       .section-img {
+        transform: translateY(-2rem);
         grid-area: right;
       }
       .section-text {
         grid-area: left;
+
+        margin: auto;
       }
     }
   }
@@ -35,30 +42,66 @@ main {
     .logos,
     .websites {
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 40% 45%;
       grid-template-rows: auto;
       grid-template-areas: "left right";
       gap: 2rem;
 
       .section-img {
+        transform: translateY(-2rem);
         grid-area: left;
       }
       .section-text {
         grid-area: right;
+        margin: auto;
       }
     }
 
     .animations {
       display: grid;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 45% 40%;
       grid-template-rows: auto;
       grid-template-areas: "left right";
       gap: 2rem;
       .section-img {
+        transform: translateY(-2rem);
         grid-area: right;
       }
       .section-text {
         grid-area: left;
+
+        margin: auto;
+      }
+    }
+  }
+}
+
+// about me grid
+#about-me {
+  @include desktops {
+    div:first-child {
+      width: 70%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: auto 40%;
+      grid-template-rows: auto;
+      grid-template-areas: "left right" "bottom bottom";
+      gap: 2rem;
+      .section-img {
+        grid-area: right;
+        display: block;
+      }
+      .info-me {
+        grid-area: left;
+      }
+      .contact {
+        grid-area: bottom;
+      }
+    }
+    .contact {
+      .button {
+        display: inline;
+        width: fit-content;
       }
     }
   }

@@ -7,18 +7,40 @@ main {
     width: 85%;
     margin: auto;
     @include tablets {
-      width: 70%;
+      width: 75%;
       padding-top: 6rem;
       text-align: start;
     }
     @include desktops {
       padding-top: 10%;
-      width: 60%;
+      width: 70%;
     }
 
     .section-img {
-      width: fit-content;
-      margin: 0 auto;
+      width: 100%;
+      img {
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        @include tablets {
+          margin-bottom: 0;
+        }
+        @include desktops {
+          width: 80%;
+          float: right;
+        }
+      }
+    }
+    .animations {
+      .section-img {
+        img {
+          @include desktops {
+            float: left;
+          }
+        }
+      }
     }
 
     .button {
@@ -33,13 +55,56 @@ main {
         justify-content: flex-start;
       }
     }
-    img {
-      margin-bottom: 1.5rem;
+  }
+  #service {
+    padding-top: 7rem;
+    @include tablets {
+      padding-top: 13rem;
     }
   }
   #about-me {
+    .section-img {
+      width: 80%;
+      margin: auto;
+      @include tablets {
+        width: 30%;
+      }
+      @include desktops {
+        width: 100%;
+
+        margin: auto;
+        img {
+          float: none;
+          margin: auto;
+          width: 100%;
+        }
+      }
+      img {
+        border-radius: 100%;
+        @include desktops {
+          border-radius: 00.5rem;
+        }
+      }
+    }
+    @include tablets {
+      padding-top: 9rem;
+      padding-bottom: 3rem;
+      h3 {
+        text-align: center;
+        @include desktops {
+          text-align: start;
+        }
+      }
+      h6 {
+        ul {
+          justify-content: center;
+          @include desktops {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
     @include desktops {
-      width: 40%;
     }
     h3 {
       padding-top: 3rem;
@@ -56,6 +121,19 @@ main {
       padding-bottom: 3rem;
     }
     .contact {
+      @include tablets {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        .button {
+          margin: 0;
+          margin-right: 1rem;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
       @include desktops {
         display: flex;
         align-items: center;
@@ -68,19 +146,6 @@ main {
           margin: 0 1rem;
         }
       }
-    }
-    .section-img {
-      width: fit-content;
-      img {
-        max-width: 40%;
-      }
-    }
-  }
-
-  .section-img {
-    img {
-      object-fit: cover;
-      max-width: 70%;
     }
   }
 }
