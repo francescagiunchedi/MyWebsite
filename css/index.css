@@ -276,6 +276,19 @@ main section .section-img img {
     float: left;
   }
 }
+main section .animations .video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+main section .animations .video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 main section .button a {
   background: #3240b3;
   border: solid #3240b3;
