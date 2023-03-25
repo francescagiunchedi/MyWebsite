@@ -64,6 +64,12 @@ header {
 
     div {
       margin: 1rem;
+      h1 {
+        @include desktops {
+          margin: 0 2rem;
+        }
+      }
+
       h6 {
         padding-bottom: 4rem;
       }
@@ -76,6 +82,11 @@ header {
           border: solid $accentColor;
         }
       }
+    }
+    .headerimage-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .header-img {
       display: none;

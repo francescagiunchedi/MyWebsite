@@ -70,16 +70,6 @@ h1,
 h2 {
   font-weight: 900;
 }
-h1 br,
-h2 br {
-  display: none;
-}
-@media (min-width: 992px) {
-  h1 br,
-  h2 br {
-    display: block;
-  }
-}
 
 ul {
   color: inherit;
@@ -172,6 +162,11 @@ header section {
 header section div {
   margin: 1rem;
 }
+@media (min-width: 992px) {
+  header section div h1 {
+    margin: 0 2rem;
+  }
+}
 header section div h6 {
   padding-bottom: 4rem;
 }
@@ -179,6 +174,11 @@ header section div .button a {
   color: #432b89;
   background: #6de38c;
   border: solid #6de38c;
+}
+header section .headerimage-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header section .header-img {
   display: none;
@@ -288,6 +288,7 @@ main section .animations .video-responsive iframe {
   height: 100%;
   width: 100%;
   position: absolute;
+  border-radius: 0.5rem;
 }
 main section .button a {
   background: #3240b3;
@@ -467,7 +468,7 @@ footer div p {
     grid-template-columns: 40% 45%;
     grid-template-rows: auto;
     grid-template-areas: "left right";
-    gap: 2rem;
+    gap: 4rem;
   }
   main .logos .section-img,
   main .websites .section-img {
@@ -484,7 +485,7 @@ footer div p {
     grid-template-columns: 45% 40%;
     grid-template-rows: auto;
     grid-template-areas: "left right";
-    gap: 2rem;
+    gap: 4rem;
   }
   main .animations .section-img {
     transform: translateY(-2rem);

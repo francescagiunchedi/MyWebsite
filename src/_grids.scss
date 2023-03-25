@@ -45,7 +45,7 @@ main {
       grid-template-columns: 40% 45%;
       grid-template-rows: auto;
       grid-template-areas: "left right";
-      gap: 2rem;
+      gap: 4rem;
 
       .section-img {
         transform: translateY(-2rem);
@@ -62,7 +62,7 @@ main {
       grid-template-columns: 45% 40%;
       grid-template-rows: auto;
       grid-template-areas: "left right";
-      gap: 2rem;
+      gap: 4rem;
       .section-img {
         transform: translateY(-2rem);
         grid-area: right;
