@@ -14,7 +14,7 @@ header {
     width: 100vw;
     position: fixed;
     @include desktops {
-      background: linear-gradient($primaryColor, hsl(245deg 56% 40%));
+      background: $primaryColor;
     }
     ul {
       justify-content: space-evenly;
@@ -36,7 +36,7 @@ header {
   .list-row {
     display: flex;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     li {
       &:before {
         color: $backgroundColorTop;
@@ -77,9 +77,14 @@ header {
       .button {
         a {
           // font-size: 0.8rem;
-          color: $secondaryColor;
-          background: $accentColor;
-          border: solid $accentColor;
+          color: $backgroundColorTop;
+          background: $primaryColor;
+          border: solid $primaryColor;
+          &:hover {
+            color: $primaryColor;
+            background: $backgroundColorTop;
+            border: solid $primaryColor;
+          }
         }
       }
     }
@@ -95,12 +100,11 @@ header {
         padding: 0%;
         display: block;
         object-fit: cover;
-        min-width: 30%;
-        max-width: 100%;
+        max-width: 1280 px;
+        min-width: 500 px;
+        width: 100%;
+
         height: auto;
-      }
-      @include desktops {
-        border-radius: 0.5rem;
       }
     }
   }
@@ -117,6 +121,9 @@ header {
       margin: 0 auto;
       h1 {
         font-size: 2em;
+        span {
+          font-weight: 500;
+        }
       }
       h6 {
         font-size: 0.9em;

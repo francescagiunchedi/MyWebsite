@@ -4,57 +4,56 @@ main {
 
   section {
     padding-top: 3rem;
-    width: 85%;
+
+
     margin: auto;
     @include tablets {
-      width: 75%;
       padding-top: 6rem;
       text-align: start;
     }
-    @include desktops {
-      padding-top: 10%;
-      width: 70%;
-    }
-
     .section-img {
-      width: 100%;
       img {
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
-        object-fit: cover;
+        max-width: 100%;
+        min-width: 100px;
         width: 100%;
-        height: 100%;
-        @include tablets {
-          margin-bottom: 0;
-        }
-        @include desktops {
-          width: 80%;
-          float: right;
-        }
+        height: auto;
+        min-height: 400px;
+        max-height: 600px;
+        object-fit: cover;
+        border-radius: 0.5rem;
       }
     }
+
     .animations {
       .section-img {
         img {
+          max-width: 100%;
+          min-width: 100px;
+          width: 100%;
+          height: auto;
+          min-height: 400px;
+          max-height: 600px;
+          object-fit: cover;
+          border-radius: 0.5rem;
           @include desktops {
             float: left;
           }
         }
       }
-      .video-responsive {
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-        height: 0;
-      }
-      .video-responsive iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        border-radius: 0.5rem;
-      }
+      // .video-responsive {
+      //   overflow: hidden;
+      //   padding-bottom: 56.25%;
+      //   position: relative;
+      //   height: 0;
+      // }
+      // .video-responsive iframe {
+      //   left: 0;
+      //   top: 0;
+      //   height: 100%;
+      //   width: 100%;
+      //   position: absolute;
+      //   border-radius: 0.5rem;
+      // }
     }
 
     .button {
@@ -71,12 +70,14 @@ main {
     }
   }
   #service {
-    padding-top: 7rem;
     @include tablets {
-      padding-top: 13rem;
+      padding-top: 20rem;
     }
   }
   #about-me {
+    article {
+      padding: 1rem;
+    }
     .section-img {
       width: 80%;
       margin: auto;

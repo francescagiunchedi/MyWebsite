@@ -103,7 +103,7 @@ header nav {
 }
 @media (min-width: 992px) {
   header nav {
-    background: linear-gradient(#3240b3, hsl(245, 56%, 40%));
+    background: #3240b3;
   }
 }
 header nav ul {
@@ -129,7 +129,7 @@ header nav ul li {
 header .list-row {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 header .list-row li:before {
   color: hsl(43, 6%, 89%);
@@ -171,9 +171,14 @@ header section div h6 {
   padding-bottom: 4rem;
 }
 header section div .button a {
-  color: #432b89;
-  background: #6de38c;
-  border: solid #6de38c;
+  color: hsl(43, 6%, 89%);
+  background: #3240b3;
+  border: solid #3240b3;
+}
+header section div .button a:hover {
+  color: #3240b3;
+  background: hsl(43, 6%, 89%);
+  border: solid #3240b3;
 }
 header section .headerimage-div {
   display: flex;
@@ -189,14 +194,10 @@ header section .header-img {
     padding: 0%;
     display: block;
     object-fit: cover;
-    min-width: 30%;
-    max-width: 100%;
+    max-width: 1280 px;
+    min-width: 500 px;
+    width: 100%;
     height: auto;
-  }
-}
-@media (min-width: 992px) {
-  header section .header-img {
-    border-radius: 0.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -214,6 +215,9 @@ header section .header-img {
   }
   header .header-text h1 {
     font-size: 2em;
+  }
+  header .header-text h1 span {
+    font-weight: 500;
   }
   header .header-text h6 {
     font-size: 0.9em;
@@ -234,61 +238,38 @@ main {
 }
 main section {
   padding-top: 3rem;
-  width: 85%;
   margin: auto;
 }
 @media (min-width: 768px) {
   main section {
-    width: 75%;
     padding-top: 6rem;
     text-align: start;
   }
 }
-@media (min-width: 992px) {
-  main section {
-    padding-top: 10%;
-    width: 70%;
-  }
-}
-main section .section-img {
-  width: 100%;
-}
 main section .section-img img {
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  object-fit: cover;
+  max-width: 100%;
+  min-width: 100px;
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
-@media (min-width: 768px) {
-  main section .section-img img {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 992px) {
-  main section .section-img img {
-    width: 80%;
-    float: right;
-  }
+main section .animations .section-img img {
+  max-width: 100%;
+  min-width: 100px;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 @media (min-width: 992px) {
   main section .animations .section-img img {
     float: left;
   }
-}
-main section .animations .video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-main section .animations .video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border-radius: 0.5rem;
 }
 main section .button a {
   background: #3240b3;
@@ -302,13 +283,13 @@ main section .list-row {
     justify-content: flex-start;
   }
 }
-main #service {
-  padding-top: 7rem;
-}
 @media (min-width: 768px) {
   main #service {
-    padding-top: 13rem;
+    padding-top: 20rem;
   }
+}
+main #about-me article {
+  padding: 1rem;
 }
 main #about-me .section-img {
   width: 80%;
@@ -426,79 +407,44 @@ footer div p {
 
 @media (min-width: 768px) {
   main .logos,
-  main .websites {
-    margin: auto;
+  main .websites,
+  main .animations {
+    float: left;
     display: grid;
-    grid-template-columns: 40% 45%;
+    grid-template-columns: 65% 35%;
     grid-template-rows: auto;
     grid-template-areas: "left right";
-    gap: 2rem;
+    padding-bottom: 15rem;
   }
   main .logos .section-img,
-  main .websites .section-img {
-    transform: translateY(-2rem);
+  main .websites .section-img,
+  main .animations .section-img {
     grid-area: left;
   }
   main .logos .section-text,
-  main .websites .section-text {
+  main .websites .section-text,
+  main .animations .section-text {
     grid-area: right;
     margin: auto;
+    padding-left: 4rem;
+    padding-right: 6rem;
   }
   main .animations {
-    display: grid;
-    grid-template-columns: 45% 40%;
-    grid-template-rows: auto;
-    grid-template-areas: "left right";
-    gap: 2rem;
-    margin: auto;
+    float: right;
+    grid-template-columns: 35% 65%;
   }
   main .animations .section-img {
-    transform: translateY(-2rem);
     grid-area: right;
   }
   main .animations .section-text {
     grid-area: left;
+    padding-right: 4rem;
+    padding-left: 6rem;
     margin: auto;
   }
 }
 @media (min-width: 992px) {
-  main .logos,
-  main .websites {
-    display: grid;
-    grid-template-columns: 40% 45%;
-    grid-template-rows: auto;
-    grid-template-areas: "left right";
-    gap: 4rem;
-  }
-  main .logos .section-img,
-  main .websites .section-img {
-    transform: translateY(-2rem);
-    grid-area: left;
-  }
-  main .logos .section-text,
-  main .websites .section-text {
-    grid-area: right;
-    margin: auto;
-  }
-  main .animations {
-    display: grid;
-    grid-template-columns: 45% 40%;
-    grid-template-rows: auto;
-    grid-template-areas: "left right";
-    gap: 4rem;
-  }
-  main .animations .section-img {
-    transform: translateY(-2rem);
-    grid-area: right;
-  }
-  main .animations .section-text {
-    grid-area: left;
-    margin: auto;
-  }
-}
-
-@media (min-width: 992px) {
-  #about-me div:first-child {
+  main #about-me div:first-child {
     width: 70%;
     margin: auto;
     display: grid;
@@ -507,17 +453,17 @@ footer div p {
     grid-template-areas: "left right" "bottom bottom";
     gap: 2rem;
   }
-  #about-me div:first-child .section-img {
+  main #about-me div:first-child .section-img {
     grid-area: right;
     display: block;
   }
-  #about-me div:first-child .info-me {
+  main #about-me div:first-child .info-me {
     grid-area: left;
   }
-  #about-me div:first-child .contact {
+  main #about-me div:first-child .contact {
     grid-area: bottom;
   }
-  #about-me .contact .button {
+  main #about-me .contact .button {
     display: inline;
     width: fit-content;
   }
