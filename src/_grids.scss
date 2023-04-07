@@ -16,8 +16,8 @@ main {
       .section-text {
         grid-area: right;
         margin: auto;
-        // padding-left: 4rem;
-        // padding-right: 6rem;
+        padding-left: 4rem;
+        padding-right: 6rem;
       }
     }
 
@@ -29,8 +29,8 @@ main {
       }
       .section-text {
         grid-area: left;
-        // padding-right: 4rem;
-        // padding-left: 6rem;
+        padding-right: 4rem;
+        padding-left: 6rem;
         margin: auto;
       }
     }

@@ -88,7 +88,6 @@ header {
         }
       }
     }
-
     .headerimage-div {
       width: 100%;
       position: relative;
@@ -97,13 +96,15 @@ header {
     .header-img {
       display: none;
       @include tablets {
-        margin: 0;
+       
         padding: 0%;
         display: block;
         object-fit: cover;
-        max-width: 100vw;
+        max-width: 1280px;
         min-width: 500 px;
         width: 100%;
+        margin-right: 0;
+        margin-left: auto;
 
         height: auto;
       }
@@ -111,12 +112,12 @@ header {
   }
   .header-text {
     @include tablets {
-      position: absolute;
-      background-color: $backgroundColorTop;
-      padding: 20rem 0;
-      padding-left: 15rem;
-      padding-right: 10rem;
-      border-radius: 0 50% 50% 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10rem;
+      padding-top: 15%;
     }
     @include desktops {
       h1 {
