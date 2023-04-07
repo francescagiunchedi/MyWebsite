@@ -150,6 +150,7 @@ header section {
   header section {
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
   }
 }
 @media (min-width: 992px) {
@@ -158,9 +159,6 @@ header section {
     justify-content: space-between;
     align-items: flex-start;
   }
-}
-header section div {
-  margin: 1rem;
 }
 @media (min-width: 992px) {
   header section div h1 {
@@ -181,10 +179,9 @@ header section div .button a:hover {
   border: solid #3240b3;
 }
 header section .headerimage-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   position: relative;
+  z-index: -1;
 }
 header section .header-img {
   display: none;
@@ -195,7 +192,7 @@ header section .header-img {
     padding: 0%;
     display: block;
     object-fit: cover;
-    max-width: 1280 px;
+    max-width: 100vw;
     min-width: 500 px;
     width: 100%;
     height: auto;
@@ -203,17 +200,15 @@ header section .header-img {
 }
 @media (min-width: 768px) {
   header .header-text {
-    padding-top: 25%;
-    padding-bottom: 15%;
+    position: absolute;
+    background-color: hsl(43, 6%, 89%);
+    padding: 20rem 0;
+    padding-left: 15rem;
+    padding-right: 10rem;
+    border-radius: 0 50% 50% 0;
   }
 }
 @media (min-width: 992px) {
-  header .header-text {
-    padding-top: 20%;
-    min-width: 40%;
-    max-width: 45%;
-    margin: 0 auto;
-  }
   header .header-text h1 {
     font-size: 2em;
   }
@@ -232,18 +227,6 @@ header section .header-img {
     color: #353546;
     background: none;
   }
-  header .mask {
-    clip-path: url("#myClip");
-    position: absolute;
-  }
-  header .mask .circle {
-    position: absolute;
-    fill: blue;
-  }
-  header .mask .rect {
-    position: absolute;
-    fill: red;
-  }
 }
 
 main {
@@ -259,6 +242,9 @@ main section {
     text-align: start;
   }
 }
+main section .section-img {
+  position: relative;
+}
 main section .section-img img {
   max-width: 100%;
   min-width: 100px;
@@ -268,6 +254,12 @@ main section .section-img img {
   max-height: 600px;
   object-fit: cover;
   border-radius: 0.5rem;
+}
+main section .section-img .circle-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: hsl(43, 6%, 89%);
 }
 main section .animations .section-img img {
   max-width: 100%;
@@ -439,8 +431,6 @@ footer div p {
   main .animations .section-text {
     grid-area: right;
     margin: auto;
-    padding-left: 4rem;
-    padding-right: 6rem;
   }
   main .animations {
     float: right;
@@ -451,8 +441,6 @@ footer div p {
   }
   main .animations .section-text {
     grid-area: left;
-    padding-right: 4rem;
-    padding-left: 6rem;
     margin: auto;
   }
 }
