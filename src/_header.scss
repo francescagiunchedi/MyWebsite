@@ -88,10 +88,12 @@ header {
         }
       }
     }
+
     .headerimage-div {
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
     .header-img {
       display: none;
@@ -139,5 +141,18 @@ header {
   @include desktops {
     color: $textColor;
     background: none;
+
+    .mask {
+      clip-path: url("#myClip");
+      position: absolute;
+      .circle {
+        position: absolute;
+        fill: blue;
+      }
+      .rect {
+        position: absolute;
+        fill: red;
+      }
+    }
   }
 }

@@ -184,6 +184,7 @@ header section .headerimage-div {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 header section .header-img {
   display: none;
@@ -230,6 +231,18 @@ header section .header-img {
   header {
     color: #353546;
     background: none;
+  }
+  header .mask {
+    clip-path: url("#myClip");
+    position: absolute;
+  }
+  header .mask .circle {
+    position: absolute;
+    fill: blue;
+  }
+  header .mask .rect {
+    position: absolute;
+    fill: red;
   }
 }
 
